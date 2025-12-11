@@ -1,0 +1,64 @@
+# conda env create -f veg_height_ml.yml
+name: veg_height
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - geopandas
+  - ipykernel
+  - ipywidgets
+  - jupyterlab
+  - jupyterlab_widgets
+  - matplotlib
+  - seaborn
+  - ipympl
+  - numpy
+  - pandas
+  - pip
+  - requests
+  - scipy
+  - setuptools_scm
+  - pytorch
+  - torchvision
+  - tensorflow
+  - tensorboard
+  - scikit-learn # checkpoint
+  - aiohttp
+  - aiobotocore
+  - boto3
+  - bokeh
+  - dask
+  - earthaccess
+  - hvplot
+  - holoviews
+  - h5py
+  - h5netcdf 
+  - jupyter
+  - jupyterlab-geojson
+  - jupyterlab-git
+  - jupyter-resource-usage
+  - jupyter_bokeh
+  - gdal=3.7
+  - geoviews
+  - netcdf4
+  - pystac-client
+  - pandas
+  - pyproj
+  - pyresample
+  - rioxarray
+  - rasterio
+  - ray-default
+  - scikit-image
+  - shapely
+  - spectral
+  - xarray
+  - zarr
+  - proj-data
+  - proj
+  - sliderule
+  - laspy
+  - pyntcloud
+  - contextily
+  - pip:
+      - pylas
+      - "deephyper[ray,torch]"

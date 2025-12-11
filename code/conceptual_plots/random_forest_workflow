@@ -1,0 +1,21 @@
+// Random Forest Workflow
+digraph {
+	A [label="Input Data"]
+	B [label="Data Preprocessing
+(Missing Value Imputation,
+Normalization)"]
+	C [label="Feature Engineering
+or Selection"]
+	D [label="Train-Test Split"]
+	E [label="Model Training
+(Random Forest)"]
+	F [label="Model Evaluation
+(Accuracy, ROC, etc.)"]
+	G [label="Prediction / Deployment"]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> G
+}
