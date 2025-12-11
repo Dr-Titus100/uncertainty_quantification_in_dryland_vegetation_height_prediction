@@ -170,13 +170,18 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-# Folders/directories to ignore
+# Ignore these folders
 data/
 documentations/
 papers/
+misc/
+nas_*/
+
+# Ignore image files
 *.png
 *.jpg
 *.jpeg
-nas_*/
+
+# Ignore HTML files
 *.html
-misc/
+
