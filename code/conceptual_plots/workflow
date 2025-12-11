@@ -1,0 +1,8 @@
+// Random Forest Workflow
+digraph {
+	A [label=Data]
+	B [label=Model]
+	C [label=Prediction]
+	A -> B
+	B -> C
+}

@@ -177,6 +177,6 @@ papers/
 *.png
 *.jpg
 *.jpeg
-nas_*
+nas_*/
 *.html
 misc/

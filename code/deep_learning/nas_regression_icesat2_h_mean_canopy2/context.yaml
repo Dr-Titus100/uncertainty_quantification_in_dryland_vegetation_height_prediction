@@ -1,0 +1,135 @@
+calls:
+- max_evals: 50
+  timeout: null
+search:
+  acq_func: UCBd
+  acq_func_kwargs: null
+  acq_optimizer: mixedga
+  acq_optimizer_kwargs: null
+  evaluator:
+    num_workers: 48
+    type: RayEvaluator
+  initial_point_generator: random
+  initial_points:
+  - batch_size: 500
+    layer_0_activation: leaky_relu
+    layer_0_dropout_rate: 0.0
+    layer_0_units: 512
+    layer_1_activation: leaky_relu
+    layer_1_dropout_rate: 0.0
+    layer_1_units: 512
+    layer_2_activation: leaky_relu
+    layer_2_dropout_rate: 0.0
+    layer_2_units: 512
+    layer_3_activation: leaky_relu
+    layer_3_dropout_rate: 0.0
+    layer_3_units: 512
+    layer_4_activation: leaky_relu
+    layer_4_dropout_rate: 0.0
+    layer_4_units: 512
+    layer_5_activation: relu
+    layer_5_dropout_rate: 0.0
+    layer_5_units: 64
+    layer_6_activation: relu
+    layer_6_dropout_rate: 0.0
+    layer_6_units: 64
+    layer_7_activation: relu
+    layer_7_dropout_rate: 0.0
+    layer_7_units: 64
+    learning_rate: 0.001
+    lr_scheduler_factor: 0.1
+    lr_scheduler_patience: 10
+    n_units_mean: 512
+    n_units_std: 512
+    num_layers: 5
+    softplus_factor: 1.0
+    std_offset: 0.001
+  kwargs: {}
+  log_dir: nas_regression_icesat2_h_mean_canopy2
+  moo_lower_bounds: null
+  moo_scalarization_strategy: Chebyshev
+  moo_scalarization_weight: null
+  multi_point_strategy: qUCBd
+  n_initial_points: null
+  objective_scaler: minmax
+  problem: '{"name": null, "hyperparameters": [{"type": "uniform_int", "name": "batch_size",
+    "lower": 200, "upper": 1500, "default_value": 500, "log": true, "meta": null},
+    {"type": "categorical", "name": "layer_0_activation", "choices": ["relu", "leaky_relu",
+    "sigmoid", "tanh", "swish", "mish", "gelu", "silu"], "weights": null, "default_value":
+    "leaky_relu", "meta": null}, {"type": "uniform_float", "name": "layer_0_dropout_rate",
+    "lower": 0.0, "upper": 0.5, "default_value": 0.0, "log": false, "meta": null},
+    {"type": "uniform_int", "name": "layer_0_units", "lower": 64, "upper": 512, "default_value":
+    512, "log": false, "meta": null}, {"type": "categorical", "name": "layer_1_activation",
+    "choices": ["relu", "leaky_relu", "sigmoid", "tanh", "swish", "mish", "gelu",
+    "silu"], "weights": null, "default_value": "leaky_relu", "meta": null}, {"type":
+    "uniform_float", "name": "layer_1_dropout_rate", "lower": 0.0, "upper": 0.5, "default_value":
+    0.0, "log": false, "meta": null}, {"type": "uniform_int", "name": "layer_1_units",
+    "lower": 64, "upper": 512, "default_value": 512, "log": false, "meta": null},
+    {"type": "categorical", "name": "layer_2_activation", "choices": ["relu", "leaky_relu",
+    "sigmoid", "tanh", "swish", "mish", "gelu", "silu"], "weights": null, "default_value":
+    "leaky_relu", "meta": null}, {"type": "uniform_float", "name": "layer_2_dropout_rate",
+    "lower": 0.0, "upper": 0.5, "default_value": 0.0, "log": false, "meta": null},
+    {"type": "uniform_int", "name": "layer_2_units", "lower": 64, "upper": 512, "default_value":
+    512, "log": false, "meta": null}, {"type": "uniform_float", "name": "learning_rate",
+    "lower": 1e-05, "upper": 0.1, "default_value": 0.001, "log": true, "meta": null},
+    {"type": "uniform_float", "name": "lr_scheduler_factor", "lower": 0.01, "upper":
+    0.99, "default_value": 0.1, "log": false, "meta": null}, {"type": "uniform_int",
+    "name": "lr_scheduler_patience", "lower": 5, "upper": 20, "default_value": 10,
+    "log": false, "meta": null}, {"type": "uniform_int", "name": "n_units_mean", "lower":
+    64, "upper": 512, "default_value": 512, "log": false, "meta": null}, {"type":
+    "uniform_int", "name": "n_units_std", "lower": 64, "upper": 512, "default_value":
+    512, "log": false, "meta": null}, {"type": "uniform_int", "name": "num_layers",
+    "lower": 3, "upper": 8, "default_value": 5, "log": false, "meta": null}, {"type":
+    "uniform_float", "name": "softplus_factor", "lower": 0.1, "upper": 10.0, "default_value":
+    1.0, "log": false, "meta": null}, {"type": "uniform_float", "name": "std_offset",
+    "lower": 1e-05, "upper": 0.1, "default_value": 0.001, "log": true, "meta": null},
+    {"type": "categorical", "name": "layer_3_activation", "choices": ["relu", "leaky_relu",
+    "sigmoid", "tanh", "swish", "mish", "gelu", "silu"], "weights": null, "default_value":
+    "leaky_relu", "meta": null}, {"type": "uniform_float", "name": "layer_3_dropout_rate",
+    "lower": 0.0, "upper": 0.5, "default_value": 0.0, "log": false, "meta": null},
+    {"type": "uniform_int", "name": "layer_3_units", "lower": 64, "upper": 512, "default_value":
+    512, "log": false, "meta": null}, {"type": "categorical", "name": "layer_4_activation",
+    "choices": ["relu", "leaky_relu", "sigmoid", "tanh", "swish", "mish", "gelu",
+    "silu"], "weights": null, "default_value": "leaky_relu", "meta": null}, {"type":
+    "uniform_float", "name": "layer_4_dropout_rate", "lower": 0.0, "upper": 0.5, "default_value":
+    0.0, "log": false, "meta": null}, {"type": "uniform_int", "name": "layer_4_units",
+    "lower": 64, "upper": 512, "default_value": 512, "log": false, "meta": null},
+    {"type": "categorical", "name": "layer_5_activation", "choices": ["relu", "leaky_relu",
+    "sigmoid", "tanh", "swish", "mish", "gelu", "silu"], "weights": null, "default_value":
+    "leaky_relu", "meta": null}, {"type": "uniform_float", "name": "layer_5_dropout_rate",
+    "lower": 0.0, "upper": 0.5, "default_value": 0.0, "log": false, "meta": null},
+    {"type": "uniform_int", "name": "layer_5_units", "lower": 64, "upper": 512, "default_value":
+    512, "log": false, "meta": null}, {"type": "categorical", "name": "layer_6_activation",
+    "choices": ["relu", "leaky_relu", "sigmoid", "tanh", "swish", "mish", "gelu",
+    "silu"], "weights": null, "default_value": "leaky_relu", "meta": null}, {"type":
+    "uniform_float", "name": "layer_6_dropout_rate", "lower": 0.0, "upper": 0.5, "default_value":
+    0.0, "log": false, "meta": null}, {"type": "uniform_int", "name": "layer_6_units",
+    "lower": 64, "upper": 512, "default_value": 512, "log": false, "meta": null},
+    {"type": "categorical", "name": "layer_7_activation", "choices": ["relu", "leaky_relu",
+    "sigmoid", "tanh", "swish", "mish", "gelu", "silu"], "weights": null, "default_value":
+    "leaky_relu", "meta": null}, {"type": "uniform_float", "name": "layer_7_dropout_rate",
+    "lower": 0.0, "upper": 0.5, "default_value": 0.0, "log": false, "meta": null},
+    {"type": "uniform_int", "name": "layer_7_units", "lower": 64, "upper": 512, "default_value":
+    512, "log": false, "meta": null}], "conditions": [{"type": "GT", "child": "layer_3_activation",
+    "parent": "num_layers", "value": 3}, {"type": "GT", "child": "layer_3_dropout_rate",
+    "parent": "num_layers", "value": 3}, {"type": "GT", "child": "layer_3_units",
+    "parent": "num_layers", "value": 3}, {"type": "GT", "child": "layer_4_activation",
+    "parent": "num_layers", "value": 4}, {"type": "GT", "child": "layer_4_dropout_rate",
+    "parent": "num_layers", "value": 4}, {"type": "GT", "child": "layer_4_units",
+    "parent": "num_layers", "value": 4}, {"type": "GT", "child": "layer_5_activation",
+    "parent": "num_layers", "value": 5}, {"type": "GT", "child": "layer_5_dropout_rate",
+    "parent": "num_layers", "value": 5}, {"type": "GT", "child": "layer_5_units",
+    "parent": "num_layers", "value": 5}, {"type": "GT", "child": "layer_6_activation",
+    "parent": "num_layers", "value": 6}, {"type": "GT", "child": "layer_6_dropout_rate",
+    "parent": "num_layers", "value": 6}, {"type": "GT", "child": "layer_6_units",
+    "parent": "num_layers", "value": 6}, {"type": "GT", "child": "layer_7_activation",
+    "parent": "num_layers", "value": 7}, {"type": "GT", "child": "layer_7_dropout_rate",
+    "parent": "num_layers", "value": 7}, {"type": "GT", "child": "layer_7_units",
+    "parent": "num_layers", "value": 7}], "forbiddens": [], "python_module_version":
+    "1.2.0", "format_version": 0.4}'
+  random_state: 42
+  stopper: MedianStopper
+  surrogate_model: ET
+  surrogate_model_kwargs: null
+  type: CBO
+  verbose: 0

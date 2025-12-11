@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "big_bbox",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::6340" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "big_bbox", "minx": 703500.0, "miny": 4711500.0, "maxx": 712499.99, "maxy": 4718999.99 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 703500.0, 4711500.0 ], [ 703500.0, 4718999.990000000223517 ], [ 712499.99, 4718999.990000000223517 ], [ 712499.99, 4711500.0 ], [ 703500.0, 4711500.0 ] ] ] } }
+]
+}
